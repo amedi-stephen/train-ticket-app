@@ -17,10 +17,8 @@ const commentSchema = new Schema({
     uploadedPhoto: String,
     createdAt: {
         type: Date,
-        //FIXME: check if it the correct format
         default: Date.now
     }
 });
 
-const Comment = mongoose.model("commet", commentSchema);
-module.exports = comment;
+module.exports = mongoose.model("Comment", commentSchema);

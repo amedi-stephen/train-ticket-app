@@ -23,5 +23,4 @@ const trainSchema = new Schema({
     arrivalTime: Date,
 });
 
-const Train = mongoose.model("train", trainSchema);
-module.exports = train;
+module.exports = mongoose.model("Train", trainSchema);

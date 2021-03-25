@@ -15,5 +15,4 @@ const ticketSchema = new Schema({
     coachNumber: Number
 });
 
-const Ticket = mongoose.model("ticket", ticketSchema);
-module.exports = ticket;
+module.exports = mongoose.model("Ticket", ticketSchema);

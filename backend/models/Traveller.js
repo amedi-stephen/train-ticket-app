@@ -38,6 +38,4 @@ const travellerSchema = new Schema({
     }
 });
 
-const Traveller = mongoose.model("traveller", travellerSchema);
-
-module.exports = traveller;
+module.exports = mongoose.model("Traveller", travellerSchema);;
