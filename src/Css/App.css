@@ -9,6 +9,10 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.8;
@@ -21,7 +25,22 @@ body {
   align-items: center;
   padding: 10px 10%;
 }
+.navbar .brand-section .brand-title {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+}
 .navbar .navbar-list .list-item {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 11px;
+}
+.navbar .navbar-list .navbar-link {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 11px;
+}
+.navbar .navbar-list .navbar-link:hover {
+  background-color: #FA825B;
+  padding: 10px 11px;
 }
