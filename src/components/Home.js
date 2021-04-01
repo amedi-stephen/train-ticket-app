@@ -1,14 +1,17 @@
 import React from "react";
 import Navbar from "./Navbar";
 import HeroImage from "./HeroImage";
-import Stations from "./Stations"
 
 function Home() {
   return (
-    <div>
+    <div className="wrap-home-page">
       <Navbar />
       <HeroImage />
-      <Stations />
+      // TODO: 
+      // stations
+      // banner with full width
+      // company values
+      // footer
     </div>
   );
 }

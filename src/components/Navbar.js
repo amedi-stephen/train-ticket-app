@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-
   window.onscroll = function () {
     scrollFunction();
   };
@@ -13,8 +13,6 @@ function Navbar() {
     ) {
       document.querySelector("nav").style.padding = "10px 10%";
       document.querySelector("nav").style.background = "#f96332";
-
-      // document.querySelector(".navbar-brand").style.fontSize = "24px";
     } else {
       document.querySelector("nav").style.padding = "15px 10%";
       document.querySelector("nav").style.background = "transparent";
@@ -24,20 +22,36 @@ function Navbar() {
   }
 
   return (
-    <nav>
+      <nav>
         <div className="navbar-brand">
-            <a className="brand-title" href="/">
-                <i className="fa fa-train"></i>
-                <span style={{marginLeft: "5px"}}>train ticket app</span>
-            </a>
+          <Link to = "/" className="brand-title">
+            <i className="fa fa-train"></i>
+            <span style={{ marginLeft: "5px" }}>train ticket app</span>
+          </Link>
         </div>
         <ul className="navbar-right">
-            <li className="navbar-list"><a href="/" className="navbar-link">book a train</a></li>
-            <li className="navbar-list"><a href="/stations" className="navbar-link">stations</a></li>
-            <li className="navbar-list"><a href="/stories" className="navbar-link">stories</a></li>
-            <li className="navbar-list"><a href="/" className="navbar-link">contacts</a></li>
+          <li className="navbar-list">
+            <Link to="/" className="navbar-link">
+              book a train
+            </Link>
+          </li>
+          <li className="navbar-list">
+            <Link to ="/stations" className="navbar-link">
+              stations
+            </Link>
+          </li>
+          <li className="navbar-list">
+            <Link to="/stories" className="navbar-link">
+              stories
+            </Link>
+          </li>
+          <li className="navbar-list">
+            <Link to="/" className="navbar-link">
+              contacts
+            </Link>
+          </li>
         </ul>
-    </nav>
+      </nav>
   );
 }
 
