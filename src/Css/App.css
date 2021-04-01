@@ -18,29 +18,52 @@ body {
   line-height: 1.8;
 }
 
-.navbar {
-  background-color: #F96332;
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10%;
+  padding: 20px 10%;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
-.navbar .brand-section .brand-title {
-  color: #FFFFFF;
+nav .navbar-brand .brand-title {
+  color: #ffffff;
   font-size: 12px;
   text-transform: uppercase;
 }
-.navbar .navbar-list .list-item {
+nav .navbar-right .navbar-list {
   display: inline-block;
-  padding: 10px 11px;
+  padding: 10px 20px;
 }
-.navbar .navbar-list .navbar-link {
-  color: #FFFFFF;
-  font-size: 12px;
+nav .navbar-right .navbar-list .navbar-link {
   text-transform: uppercase;
-  padding: 10px 11px;
+  font-size: 12px;
+  color: #ffffff;
+  padding: 10px 16px;
 }
-.navbar .navbar-list .navbar-link:hover {
-  background-color: #FA825B;
-  padding: 10px 11px;
+nav .navbar-right .navbar-list .navbar-link:hover {
+  background-color: #f96332;
+  border-radius: 5px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(139, 0, 0, 0.7), rgba(220, 20, 60, 0.4)), url("../Images/balazs-busznyak-El5zuQAtfeo-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+.hero-image .hero-image-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image .hero-image-content .hero-position {
+  color: white;
+  width: 40% auto;
+  text-align: center;
 }

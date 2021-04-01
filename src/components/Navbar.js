@@ -1,20 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Navbar() {
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 90 ||
+      document.documentElement.scrollTop > 90
+    ) {
+      document.querySelector("nav").style.padding = "15px 10%";
+
+      // document.querySelector(".navbar-brand").style.fontSize = "24px";
+    } else {
+      document.querySelector("nav").style.padding = "20px 10%";
+
+      document.querySelector(".navbar-brand").style.fontSize = "35px";
+    }
+  }
+
   return (
     <nav>
-      <div className="navbar">
-          <div className="brand-section">
-              <Link to ="/" className="brand-title"><i className="fa fa-train"></i> Train Ticket App</Link>
-          </div>
-          <ul className="navbar-list">
-            <li className="list-item"><Link to="/" className="navbar-link">book a train</Link></li>
-            <li className="list-item"><Link to="/stations" className="navbar-link">stations</Link></li>
-            <li className="list-item"><Link to="/stories" className="navbar-link">stories</Link></li>
-            <li className="list-item"><Link to="/contacts" className="navbar-link">contact us</Link></li>
-          </ul>
-      </div>
+        <div className="navbar-brand">
+            <a className="brand-title" href="/">
+                <i className="fa fa-train"></i>
+                <span style={{marginLeft: "5px"}}>train ticket app</span>
+            </a>
+        </div>
+        <ul className="navbar-right">
+            <li className="navbar-list"><a href="/" className="navbar-link">book a train</a></li>
+            <li className="navbar-list"><a href="/stations" className="navbar-link">stations</a></li>
+            <li className="navbar-list"><a href="/stories" className="navbar-link">stories</a></li>
+            <li className="navbar-list"><a href="/" className="navbar-link">contacts</a></li>
+        </ul>
     </nav>
   );
 }

@@ -1,60 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-$primary-color: #F96332;
-$info-color: #2CA8FF;
-$success-color: #18CE0F;
-$warning-color: #FFB236;
-$danger-color: #FF3636;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+$primary-color: #f96332;
+$info-color: #2ca8ff;
+$success-color: #18ce0f;
+$warning-color: #ffb236;
+$danger-color: #ff3636;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
 }
 
-.navbar {
-    background-color: $primary-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 
-    .brand-section {
-        .brand-title {
-            color: #FFFFFF;
-            font-size: 12px;
-            text-transform: uppercase;
-        }
+  .navbar-brand {
+    .brand-title {
+      color: #ffffff;
+      font-size: 12px;
+      text-transform: uppercase;
     }
+  }
 
+  .navbar-right {
     .navbar-list {
-        .list-item {
-            display: inline-block;
-            padding: 10px 11px;
-        }
-        .navbar-link {
-            color: #FFFFFF;
-            font-size: 12px;
-            text-transform: uppercase;
-            padding: 10px 11px;
-        }
-        .navbar-link:hover {
-            background-color: #FA825B;
-            padding: 10px 11px;
-        }
+      display: inline-block;
+      padding: 10px 20px;
+
+      .navbar-link {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #ffffff;
+        padding: 10px 16px;
+      }
+
+      .navbar-link:hover {
+        // TODO: look for a perfect hover color
+        background-color: $primary-color;
+        border-radius: 5px;
+      }
     }
+  }
+}
+
+.hero-image {
+  background-image: linear-gradient(
+      rgba(139, 0, 0, 0.7),
+      rgba(220, 20, 60, 0.4)
+    ),
+    url("../Images/balazs-busznyak-El5zuQAtfeo-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+
+  .hero-image-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-position {
+      color: white;
+      width: 40% auto;
+      text-align: center;
+    }
+  }
 }
