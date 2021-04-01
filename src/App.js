@@ -1,14 +1,12 @@
 import React from "react";
-import DatePicker from "react-datepicker";
-import Navbar from "./components/Navbar";
-import HeroImage from "./components/HeroImage";
+import Home from "./components/Home";
+
 import "./Sass/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroImage />
+      <Home />
     </div>
   );
 }

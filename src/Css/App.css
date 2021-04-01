@@ -65,5 +65,48 @@ nav .navbar-right .navbar-list .navbar-link:hover {
 .hero-image .hero-image-content .hero-position {
   color: white;
   width: 40% auto;
+}
+.hero-image .hero-image-content .hero-position h1 {
+  text-transform: uppercase;
   text-align: center;
+  margin-bottom: 10px;
+}
+.hero-image .hero-image-content .hero-position h2 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hero-image .hero-image-content .hero-position .form-search-train {
+  display: flex;
+  align-items: flex-end;
+}
+.hero-image .hero-image-content .hero-position .form-search-train .form-group label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.hero-image .hero-image-content .hero-position .form-search-train .form-group select,
+.hero-image .hero-image-content .hero-position .form-search-train .form-group .input-date {
+  padding: 10px 18px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+}
+.hero-image .hero-image-content .hero-position .form-search-train .form-group select:focus,
+.hero-image .hero-image-content .hero-position .form-search-train .form-group .input-date:focus {
+  box-shadow: 0 0 3px 2px #f96332;
+}
+.hero-image .hero-image-content .hero-position .form-search-train .btn-outline-default {
+  cursor: pointer;
+  border: 1px solid #f96332;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+.hero-image .hero-image-content .hero-position .form-search-train .btn-outline-default:hover {
+  background-color: #f96332;
+  transition: 0.4s;
 }

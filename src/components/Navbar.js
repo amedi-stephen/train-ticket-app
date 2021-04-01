@@ -11,11 +11,13 @@ function Navbar() {
       document.body.scrollTop > 90 ||
       document.documentElement.scrollTop > 90
     ) {
-      document.querySelector("nav").style.padding = "15px 10%";
+      document.querySelector("nav").style.padding = "10px 10%";
+      document.querySelector("nav").style.background = "#f96332";
 
       // document.querySelector(".navbar-brand").style.fontSize = "24px";
     } else {
-      document.querySelector("nav").style.padding = "20px 10%";
+      document.querySelector("nav").style.padding = "15px 10%";
+      document.querySelector("nav").style.background = "transparent";
 
       document.querySelector(".navbar-brand").style.fontSize = "35px";
     }
