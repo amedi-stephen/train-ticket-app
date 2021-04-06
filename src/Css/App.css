@@ -86,6 +86,38 @@ nav .navbar-right .navbar-list .navbar-link:hover {
   border-radius: 5px;
 }
 
+.nav2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f96332;
+  z-index: 1;
+}
+.nav2 .navbar-brand .brand-title {
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.nav2 .navbar-right .navbar-list {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.nav2 .navbar-right .navbar-list .navbar-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #ffffff;
+  padding: 10px 16px;
+}
+.nav2 .navbar-right .navbar-list .navbar-link:hover {
+  background-color: #f96332;
+  border-radius: 5px;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(139, 0, 0, 0.7), rgba(220, 20, 60, 0.4)), url("../Images/balazs-busznyak-El5zuQAtfeo-unsplash.jpg");
   background-repeat: no-repeat;

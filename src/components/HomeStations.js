@@ -8,7 +8,7 @@ function HomeStations() {
         <h1>Featured Stations</h1>
       </div>
 
-      <div class="station-cards-row">
+      <div class="cards-row">
         <div className="card">
           <div className="station-image">
             <img src="/Images/54_n.jpg" alt="city" />
