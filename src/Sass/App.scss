@@ -28,7 +28,7 @@ a {
 .header-center {
   text-align: center;
   text-transform: uppercase;
-  margin:40px 0;
+  margin: 40px 0;
 }
 
 .cards-row {
@@ -222,7 +222,6 @@ nav {
 }
 
 .home-station-section {
-
   .station-section-header {
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -278,7 +277,7 @@ nav {
   background-position: center center;
 
   h2 {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   span {
@@ -288,7 +287,6 @@ nav {
 }
 
 .steps-section {
-
   .steps-header {
     margin: 40px 0;
     text-align: center;
@@ -340,6 +338,7 @@ footer {
 
 .all-stations-section {
   margin-top: 160px;
+
   .all-stations-header {
     margin: 50px 0;
     text-align: center;
@@ -348,6 +347,142 @@ footer {
   .cards-row {
     .card {
       margin-bottom: 80px;
+    }
+  }
+}
+
+.comment-section {
+  .comment-body {
+    .comment-body-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .display-post {
+        background-color: $primary-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: white;
+        padding: 10px 20px;
+      }
+    }
+
+    .form-comment-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .comment-form {
+        width: 40%;
+        padding: 20px 30px;
+        margin: 40px 0;
+        width: 40% auto;
+
+        input {
+          width: 100%;
+          padding: 10px 18px;
+          margin: 20px 0;
+          border: 1px solid #e1e1e1;
+          border-radius: 30px;
+          outline: none;
+          display: block;
+
+          &:focus {
+            border: 1px solid $primary-color;
+          }
+        }
+
+        textarea {
+          margin-bottom: 20px;
+          resize: none;
+          border: 1px solid #e1e1e1;
+          outline: none;
+          height: 100px;
+          width: 100%;
+          display: block;
+          padding: 10px 5%;
+
+          &:focus {
+            border: 1px solid $primary-color;
+          }
+        }
+
+        button {
+          display: block;
+          width: 100%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 10px 30px;
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+
+    .comment-wrapper {
+      margin: 40px 0;
+
+      .media {
+        margin: 0 15%;
+        display: flex;
+
+        img {
+          margin-right: 2%;
+        }
+
+        .media-body {
+
+          width: 100%;
+          h5 {
+            .media-name {
+              margin-right: 10px;
+            }
+
+            .text-muted {
+              color: #b4b4b4;
+            }
+          }
+
+          .comment-reply {
+            input {
+              width: 100%;
+              padding: 10px 18px;
+              margin: 20px 0;
+              border: 1px solid #e1e1e1;
+              border-radius: 30px;
+              outline: none;
+              display: block;
+
+              &:focus {
+                border: 1px solid $primary-color;
+              }
+            }
+          }
+
+          .media-tools {
+
+            .text-muted {
+              margin-right: 10px;
+              color: #b4b4b4;
+              cursor: pointer;
+
+              .agree {
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+
+              .disagree {
+                &:hover {
+                  color: $danger-color;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
