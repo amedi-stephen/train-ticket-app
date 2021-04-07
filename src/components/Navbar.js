@@ -8,17 +8,26 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, true);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
+    console.log("component unmounted");
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll(event) {
-    let scrolltop = document.body.scrollTop || document.documentElement.scrollTop;
-    let bg = "#red";
-    // let itemTranslate = Math.min(0, scrolltop/3 - 60)
+  handleScroll(e) {
+    let scrollVertical = document.body.scrollTop || document.documentElement.scrollTop;
+
+    if(scrollVertical > 90) {
+      console.log("Hurray");
+      document.querySelector("nav").style.background = "#f96332";
+      document.querySelector("nav").style.padding = "10px 10%";
+    } else {
+      console.log("oops")
+      document.querySelector("nav").style.background = "transparent";
+      document.querySelector("nav").style.padding = "20px 10%";
+    }
   }
   render() {
     return (
