@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
-function Stories() {
+function Stories(title) {
+  // hook code goes here
+  useEffect(() => {
+    document.title = "Hey there...";
+    
+  });
+
   return (
     <div>
       <Nav />
@@ -16,13 +22,12 @@ function Stories() {
         <div className="comment-body">
           <div className="comment-body-header">
             <h2>340 comments</h2>
-            <button className="display-post">
-              Post Comment
+            <button type="button" className="display-post">
               <span className="plus-icon">
-                <i className="fa fa-plus-square"></i>
+                <i className="fa fa-plus"></i>
               </span>
               <span className="minus-icon">
-                <i className="fa fa-minus-square"></i>
+                <i className="fa fa-minus"></i>
               </span>
             </button>
           </div>

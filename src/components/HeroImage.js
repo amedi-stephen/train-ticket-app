@@ -15,7 +15,7 @@ function HeroImage() {
             book tickets from the comfort of your homes
           </h2>
 
-          <form className="form-standard form-search-train">
+          <form className="form-inline">
             <div className="form-group">
               <label for = "from">from</label>
               <select required>

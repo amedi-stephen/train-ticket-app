@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Stations from "./components/Stations";
 import Stories from "./components/Stories";
 import Contacts from "./components/Contacts";
+import SearchResults from "./components/SearchResults";
 
 import "./Sass/App.scss";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/stations" component={Stations} />
         <Route path="/stories" component={Stories} />
         <Route path="/contacts" component={Contacts} />
+        <Route path="/results" component={SearchResults} />
       </Switch>
     </Router>
   );

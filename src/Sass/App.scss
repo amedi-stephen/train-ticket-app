@@ -22,7 +22,7 @@ a {
 }
 
 .container {
-  margin: 100px 10%;
+  margin: 130px 10%;
 }
 
 .header-center {
@@ -58,6 +58,20 @@ a {
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
+.alert-danger {
+  background-color: $danger-color;
+  padding: 10px 2%;
+  color: #f4f4f4;
+}
+
+.alert-warning {
+  background-color: $warning-color;
+  padding: 10px 2%;
+  color: white;
+  transition: 0.2s ease-in-out 1s;
+  margin: 20px 0;
+}
+
 .btn-outline-default {
   cursor: pointer;
   border: 1px solid $primary-color;
@@ -70,6 +84,53 @@ a {
     background-color: $primary-color;
     transition: 0.4s;
   }
+}
+
+.form-inline {
+  display: flex;
+  align-items: flex-end;
+
+  .form-group {
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    select,
+    .input-date {
+      padding: 10px 18px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+
+      &:focus {
+        box-shadow: 0 0 3px 2px $primary-color;
+      }
+    }
+  }
+}
+
+.btn-default-lg {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  background-color: $primary-color;
+  color: white;
+  margin: 20px 0;
+}
+
+.btn-default-md {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  margin: 20px 0;
 }
 
 body {
@@ -189,33 +250,6 @@ nav {
         text-transform: capitalize;
         text-align: center;
         margin-bottom: 20px;
-      }
-
-      .form-search-train {
-        display: flex;
-        align-items: flex-end;
-
-        .form-group {
-          label {
-            display: block;
-            text-transform: uppercase;
-            font-size: 12px;
-            margin-bottom: 5px;
-          }
-
-          select,
-          .input-date {
-            padding: 10px 18px;
-            margin-right: 5px;
-            border: none;
-            border-radius: 30px;
-            outline: none;
-
-            &:focus {
-              box-shadow: 0 0 3px 2px $primary-color;
-            }
-          }
-        }
       }
     }
   }
@@ -365,6 +399,10 @@ footer {
         cursor: pointer;
         color: white;
         padding: 10px 20px;
+
+        .minus-icon {
+          display: none;
+        }
       }
     }
 
@@ -374,10 +412,12 @@ footer {
       align-items: center;
 
       .comment-form {
+        display: none;
         width: 40%;
         padding: 20px 30px;
         margin: 40px 0;
         width: 40% auto;
+        transition: 0.2s ease-in 1s;
 
         input {
           width: 100%;
@@ -433,7 +473,6 @@ footer {
         }
 
         .media-body {
-
           width: 100%;
           h5 {
             .media-name {
@@ -462,7 +501,6 @@ footer {
           }
 
           .media-tools {
-
             .text-muted {
               margin-right: 10px;
               color: #b4b4b4;
@@ -483,6 +521,67 @@ footer {
           }
         }
       }
+    }
+  }
+}
+
+.display-comment-form {
+  .comment-form {
+    display: block;
+
+    .minus-icon {
+      display: block;
+    }
+    .plus-icon {
+      display: none;
+    }
+  }
+}
+
+.search-wrapper {
+  .user-search-info {
+    margin-bottom: 20px;
+    h4 {
+      margin: 10px 0;
+    }
+    span {
+      margin-right: 10%;
+    }
+  }
+  .modify-search {
+    .heading-row {
+      margin: 20px 0;
+      padding: 20px 2%;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-bordered {
+      display: flex;
+      justify-content: space-around;
+      transition: 0.4s ease-out 1s;
+      margin-bottom: 20px;
+
+      .form-group {
+        label {
+          display: block;
+        }
+        select, .input-date {
+          border: 1px solid #e1e1e1;
+        }
+      }
+    }
+  }
+  .train-info {
+    text-align: center;
+    .train-info-body {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15%;
+      line-height: 3;
+      text-align: start;
     }
   }
 }
