@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function SearchResults() {
   const [startDate, setStartDate] = useState(new Date());
+  // TODO: lets consider that this component also stores state
   return (
     <div>
       <Nav />
@@ -31,87 +32,88 @@ function SearchResults() {
           {/*  END OF USER-SEARCH-INFO */}
 
           {/* MODIFY SEARCH */}
-          <div className="modify-search">
-            {/* MODIFY SEARCH HEADER */}
-            <div className="heading-row">
-              <h3>Modify search</h3>
-              <button className="btn-default-md">
-                <span className="plus-icon">
-                  <i className="fa fa-plus"></i>
-                </span>
-                <span className="minus-icon">
-                  <i className="fa fa-minus"></i>
-                </span>
-              </button>
-            </div>
-            {/* END MODIFY SEARCH HEADER */}
-
+          <section className="modify-search">
             {/* MODIFY FORM */}
-            <form className="form-inline form-bordered">
-              {/* FORM GROUP */}
-              <div className="form-group">
-                <label for="leaving-from">Leaving from</label>
-                <select required>
-                  <option value="hidden">Select...</option>
-                  <option>Nairobi Terminus</option>
-                  <option>Mombasa Terminus</option>
-                  <option>Voi</option>
-                  <option>Mtito Andei</option>
-                  <option>Mariakani</option>
-                  <option>Miaseny</option>
-                  <option>Kibwezi</option>
-                  <option>Emali</option>
-                  <option>Athi River</option>
-                </select>
+            <div className="form-section">
+              {/* MODIFY SEARCH HEADER */}
+              <div className="heading-row">
+                <h3>Search again</h3>
+                <button type="button" className="btn-default-md btn-toggle">
+                  <span className="plus-icon">
+                    <i className="far fa-plus"></i>
+                  </span>
+                  <span className="minus-icon">
+                    <i className="far fa-minus"></i>
+                  </span>
+                </button>
               </div>
-              {/* END OF FORM GROUP */}
+              {/* END MODIFY SEARCH HEADER */}
+              <form className="form-inline form-bordered">
+                {/* FORM GROUP */}
+                <div className="form-group">
+                  <label for="leaving-from">Leaving from</label>
+                  <select required>
+                    <option value="hidden">Select...</option>
+                    <option>Nairobi Terminus</option>
+                    <option>Mombasa Terminus</option>
+                    <option>Voi</option>
+                    <option>Mtito Andei</option>
+                    <option>Mariakani</option>
+                    <option>Miaseny</option>
+                    <option>Kibwezi</option>
+                    <option>Emali</option>
+                    <option>Athi River</option>
+                  </select>
+                </div>
+                {/* END OF FORM GROUP */}
 
-              {/* FORM GROUP */}
-              <div className="form-group">
-                <label for="going-to">Going to</label>
-                <select required>
-                  <option value="hidden">Select...</option>
-                  <option>Nairobi Terminus</option>
-                  <option>Mombasa Terminus</option>
-                  <option>Voi</option>
-                  <option>Mtito Andei</option>
-                  <option>Mariakani</option>
-                  <option>Miaseny</option>
-                  <option>Kibwezi</option>
-                  <option>Emali</option>
-                  <option>Athi River</option>
-                </select>
-              </div>
-              {/* END OF FORM GROUP */}
+                {/* FORM GROUP */}
+                <div className="form-group">
+                  <label for="going-to">Going to</label>
+                  <select required>
+                    <option value="hidden">Select...</option>
+                    <option>Nairobi Terminus</option>
+                    <option>Mombasa Terminus</option>
+                    <option>Voi</option>
+                    <option>Mtito Andei</option>
+                    <option>Mariakani</option>
+                    <option>Miaseny</option>
+                    <option>Kibwezi</option>
+                    <option>Emali</option>
+                    <option>Athi River</option>
+                  </select>
+                </div>
+                {/* END OF FORM GROUP */}
 
-              {/* FORM GROUP */}
-              <div className="form-group">
-                <label for="from">departure date</label>
-                <DatePicker
-                  className="input-date"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                />
-              </div>
-              {/* END OF FORM GROUP */}
-            </form>
-            {/* END OF MODIFY FORM */}
-
-            {/* TODO: WARNING MESSAGE - IF TRAIN NOT FOUND */}
-            <div className="alert-warning">
-              <div className="warning-header">
-                <h3>Fully booked - search differently</h3>
-              </div>
-              <div className="warning-body">
-                <p>
-                  Train seats fully booked for Voi to Mtito Andei on 04/21/2021.
-                  Please search for another date.
-                </p>
-              </div>
+                {/* FORM GROUP */}
+                <div className="form-group">
+                  <label for="from">departure date</label>
+                  <DatePicker
+                    className="input-date"
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                  />
+                </div>
+                {/* END OF FORM GROUP */}
+              </form>
+              {/* END OF MODIFY FORM */}
             </div>
-            {/* END OF WARNING MESSAGE - IF TRAIN NOT FOUND*/}
-          </div>
+          </section>
           {/* END OF MODIFY SEARCH */}
+
+          {/* TODO: WARNING MESSAGE - IF TRAIN NOT FOUND */}
+          <div className="alert-warning">
+            <div className="warning-header">
+              <h3>Fully booked - search differently</h3>
+            </div>
+            <div className="warning-body">
+              <p>
+                Train seats fully booked for Voi to Mtito Andei on 04/21/2021.
+                Please search for another date.
+              </p>
+            </div>
+          </div>
+          {/* END OF WARNING MESSAGE - IF TRAIN NOT FOUND*/}
 
           {/* TRAIN INFO - IF TRAIN FOUND */}
           <div className="train-info">

@@ -58,6 +58,10 @@ a {
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
+.minus-icon {
+  display: none;
+}
+
 .alert-danger {
   background-color: $danger-color;
   padding: 10px 2%;
@@ -548,28 +552,35 @@ footer {
       margin-right: 10%;
     }
   }
+
   .modify-search {
-    .heading-row {
-      margin: 20px 0;
-      padding: 20px 2%;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
 
-    .form-bordered {
-      display: flex;
-      justify-content: space-around;
-      transition: 0.4s ease-out 1s;
-      margin-bottom: 20px;
+    .form-section {
+      .heading-row {
+        background-color: yellowgreen;
+        margin: 20px 0;
+        padding: 20px 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-      .form-group {
-        label {
-          display: block;
-        }
-        select, .input-date {
-          border: 1px solid #e1e1e1;
+      .form-bordered {
+        display: none;
+        background-color: $info-color;
+        padding: 20px 10%;
+        justify-content: space-between;
+        transition: 0.4s ease-out 1s;
+        margin-bottom: 20px;
+
+        .form-group {
+          label {
+            display: block;
+          }
+          select,
+          .input-date {
+            border: 1px solid #e1e1e1;
+          }
         }
       }
     }
