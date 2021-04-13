@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import moment from "moment"
 
 function HeroImage() {
   const [locationFrom, setLocationFrom] = useState("");
   const [locationTo, setLocationTo] = useState("");
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date().toLocaleDateString());
+  const [date, setDate] = useState(moment().format('llll'));
   
   return (
     <div className="hero-image">
@@ -48,18 +50,14 @@ function HeroImage() {
 
             <div className="form-group">
               <label for="startDate">departure date</label>
-              {/* <DatePicker
-                className="input-date"
-                name={startDate}
-                selected={startDate}
-                onChange={date => setStartDate(date)}
-              /> */}
-              <input type="date" className="input-date" name="date" value={date} onChange={setDate} />
+              <input type="date" className="input-date" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
             <button className="btn-outline-default">book a train</button>
 
             {/* {date} */}
           </form>
+
+          {date}
         </div>
       </div>
     </div>
