@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-
-import "react-datepicker/dist/react-datepicker.css";
 
 function HeroImage() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [locationFrom, setLocationFrom] = useState("");
+  const [locationTo, setLocationTo] = useState("");
+  const [date, setDate] = useState(new Date());
+  
   return (
     <div className="hero-image">
       <div className="hero-image-content">
@@ -16,10 +16,9 @@ function HeroImage() {
           <form className="form-inline">
             <div className="form-group">
               <label for="locationFrom">from</label>
-              {/* FIXME: the value of the state */}
-              <select name="locationFrom">
+              <select name="locationFrom" value={locationFrom} onChange={(e) => setLocationFrom(e.target.value)}>
                 <option value="">Select...</option>
-                <option value="nairobi">Nairobi</option>
+                <option value="nairobi">Nairobi Terminus</option>
                 <option value="mombasa">Mombasa Terminus</option>
                 <option value="voi">Voi</option>
                 <option value="mtito andei">Mtito Andei</option>
@@ -33,11 +32,10 @@ function HeroImage() {
 
             <div className="form-group">
               <label for="locationTo">to</label>
-              {/*FIXME: the value of the state*/}
-              <select name="locationTo" required>
+              <select name="locationTo" value={locationTo} onChange={(e) => setLocationTo(e.target.value)}>
                 <option value="">Select...</option>
-                <option value="nairobi">Nairobi</option>
-                <option value="mombasa">Mombasa</option>
+                <option value="nairobi terminus">Nairobi Terminus</option>
+                <option value="mombasa terminus">Mombasa Terminus</option>
                 <option value="voi">Voi</option>
                 <option value="mtito andei">Mtito Andei</option>
                 <option value="mariakani">Mariakani</option>
@@ -49,15 +47,18 @@ function HeroImage() {
             </div>
 
             <div className="form-group">
-              <label for="from">departure date</label>
-              <DatePicker
+              <label for="startDate">departure date</label>
+              {/* <DatePicker
                 className="input-date"
+                name={startDate}
                 selected={startDate}
-                onChange={(date) => setStartDate(date)}
-              />
+                onChange={date => setStartDate(date)}
+              /> */}
+              <input type="date" className="input-date" name="date" value={date} onChange={setDate} />
             </div>
-
             <button className="btn-outline-default">book a train</button>
+
+            {/* {date} */}
           </form>
         </div>
       </div>
