@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
 import Nav from "./Nav";
 import Footer from "./Footer";
-
-import "react-datepicker/dist/react-datepicker.css";
+import SearchField from "./SearchField";
 
 function SearchResults() {
-  const [startDate, setStartDate] = useState(new Date());
-  // TODO: lets consider that this component also stores state
   return (
     <div>
       <Nav />
@@ -48,54 +44,7 @@ function SearchResults() {
                 </button>
               </div>
               {/* END MODIFY SEARCH HEADER */}
-              <form className="form-inline form-bordered">
-                {/* FORM GROUP */}
-                <div className="form-group">
-                  <label for="leaving-from">Leaving from</label>
-                  <select required>
-                    <option value="hidden">Select...</option>
-                    <option>Nairobi Terminus</option>
-                    <option>Mombasa Terminus</option>
-                    <option>Voi</option>
-                    <option>Mtito Andei</option>
-                    <option>Mariakani</option>
-                    <option>Miaseny</option>
-                    <option>Kibwezi</option>
-                    <option>Emali</option>
-                    <option>Athi River</option>
-                  </select>
-                </div>
-                {/* END OF FORM GROUP */}
-
-                {/* FORM GROUP */}
-                <div className="form-group">
-                  <label for="going-to">Going to</label>
-                  <select required>
-                    <option value="hidden">Select...</option>
-                    <option>Nairobi Terminus</option>
-                    <option>Mombasa Terminus</option>
-                    <option>Voi</option>
-                    <option>Mtito Andei</option>
-                    <option>Mariakani</option>
-                    <option>Miaseny</option>
-                    <option>Kibwezi</option>
-                    <option>Emali</option>
-                    <option>Athi River</option>
-                  </select>
-                </div>
-                {/* END OF FORM GROUP */}
-
-                {/* FORM GROUP */}
-                <div className="form-group">
-                  <label for="from">departure date</label>
-                  <DatePicker
-                    className="input-date"
-                    selected={startDate}
-                    onChange={(date) => setStartDate(date)}
-                  />
-                </div>
-                {/* END OF FORM GROUP */}
-              </form>
+              <SearchField />
               {/* END OF MODIFY FORM */}
             </div>
           </section>

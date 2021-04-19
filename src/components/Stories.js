@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import CommentField from "./CommentField";
 
 function Stories(title) {
   // hook code goes here
   useEffect(() => {
-    document.title = "Hey there...";
-    
+    console.log("Hook ran")
   });
 
   return (
@@ -32,14 +32,7 @@ function Stories(title) {
             </button>
           </div>
 
-          <form className="form-comment-wrapper">
-            <div className="comment-form">
-              <input type="text" placeholder="Email" className="form-text" />
-              <input type="text" placeholder="Name" />
-              <textarea placeholder="Share your opinion..." />
-              <button>Comment</button>
-            </div>
-          </form>
+          <CommentField />
 
           <hr />
 
