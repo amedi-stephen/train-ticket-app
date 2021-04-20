@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import CommentField from "./CommentField";
+import ViewComments from "./ViewComments";
 
-function Stories(title) {
-  // hook code goes here
-  useEffect(() => {
-    console.log("Hook ran")
-  });
-
+function Stories() {
   return (
     <div>
       <Nav />
@@ -36,72 +32,7 @@ function Stories(title) {
 
           <hr />
 
-          <div className="comment-wrapper">
-            <div className="media">
-              <img
-                className="mr-3"
-                src="https://source.unsplash.com/random"
-                alt="profile"
-                width="64"
-                height="64"
-              />
-              <div className="media-body">
-                <h5>
-                  <span className="media-name">johndoe@gmail</span>
-                  <span className="text-muted">4 min ago</span>
-                </h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                nisi vulputate fringilla. Donec lacinia congue felis in
-                faucibus.
-                <form className="comment-reply">
-                  <input type="text" placeholder="Reply..." />
-                </form>
-                <div className="media-tools">
-                  <span className="text-muted">Share</span>
-                  <span className="text-muted">
-                    <i className="fa fa-thumbs-up agree"></i> 34{" "}
-                  </span>
-                  <span className="text-muted">
-                    <i className="fa fa-thumbs-down disagree"></i> 14{" "}
-                  </span>
-                </div>
-                <div className="media">
-                  <img
-                    className="mr-3"
-                    src="https://source.unsplash.com/random"
-                    alt="profile"
-                    width="64"
-                    height="64"
-                  />
-                  <div className="media-body">
-                    <h5>
-                      <span className="media-name">johndoe@gmail</span>
-                      <span className="text-muted">4 min ago</span>
-                    </h5>
-                    that something looked good. can i have some of that
-                    <div className="media-tools">
-                      <span className="text-muted">Share</span>
-                      <span className="text-muted">
-                        <i className="fa fa-thumbs-up agree"></i> 34{" "}
-                      </span>
-                      <span className="text-muted">
-                        <i className="fa fa-thumbs-down disagree"></i> 14{" "}
-                      </span>
-                    </div>
-                    <form className="comment-reply">
-                      <input
-                        type="text"
-                        placeholder="Reply..."
-                        style={{ width: "100%" }}
-                      />
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ViewComments />
         </div>
       </div>
 

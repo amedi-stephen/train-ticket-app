@@ -488,7 +488,10 @@ footer {
           }
 
           .comment-reply {
-            input {
+            textarea {
+              resize: none;
+              height: 40px;
+              overflow: hidden;
               width: 100%;
               padding: 10px 18px;
               margin: 20px 0;
