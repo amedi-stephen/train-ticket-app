@@ -7,12 +7,12 @@ import Contacts from "./components/Contacts";
 import SearchResults from "./components/SearchResults";
 
 import "./Sass/App.scss";
+import TravellerInfo from "./components/TravellerInfo";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-      </div>
+      <div className="App"></div>
 
       <Switch>
         <Route path="/" exact component={Home} />
@@ -20,6 +20,7 @@ function App() {
         <Route path="/stories" component={Stories} />
         <Route path="/contacts" component={Contacts} />
         <Route path="/results" component={SearchResults} />
+        <Route path="/train-seat" component={TravellerInfo} />
       </Switch>
     </Router>
   );
