@@ -15,7 +15,7 @@ const TravellerInfo = () => {
           <h4>How many people</h4>
           <div className="form-group">
             <label for="adult-count">Adults</label>
-            <input type="text" placeholder="How many adults" />
+            <input type="text" placeholder="How many adults"     />
           </div>
 
           <div className="form-group">

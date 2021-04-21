@@ -1,18 +1,33 @@
-import React, { useState } from "react";
-import moment from "moment"
+import React from "react";
+import {useFormik} from 'formik'
+import * as Yup from 'yup'
 
 const SearchField = () => {
-  const [locationFrom, setLocationFrom] = useState("");
-  const [locationTo, setLocationTo] = useState("");
-  const [date, setDate] = useState(new Date().toLocaleDateString());
+  const formik = useFormik({
+    initialValues: {
+      locationFrom: '',
+      locationTo: '',
+      departureDate: ''
+    }, 
+    validationSchema: Yup.object({
+      locationFrom: Yup.string().required('Required'),
+      locationTo: Yup.string().required('Required'),
+      departureDate: Yup.date().required('Required'),
+    }),
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2))
+    }
+  })
   return (
-    <form className="form-inline">
+    <form className="form-inline" onSubmit={formik.handleSubmit}>
       <div className="form-group">
-        <label for="locationFrom">from</label>
+        <label htmlFor="locationFrom">from</label>
         <select
           name="locationFrom"
-          value={locationFrom}
-          onChange={(e) => setLocationFrom(e.target.value)}
+          id="locationFrom"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.locationFrom}
         >
           <option value="">Select...</option>
           <option value="nairobi">Nairobi Terminus</option>
@@ -27,12 +42,15 @@ const SearchField = () => {
         </select>
       </div>
 
+      {formik.errors.locationFrom ? <div>{formik.errors.locationFrom}</div> : null}
+
       <div className="form-group">
-        <label for="locationTo">to</label>
+        <label htmlFor="locationTo">to</label>
         <select
           name="locationTo"
-          value={locationTo}
-          onChange={(e) => setLocationTo(e.target.value)}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.locationTo}
         >
           <option value="">Select...</option>
           <option value="nairobi terminus">Nairobi Terminus</option>
@@ -48,16 +66,17 @@ const SearchField = () => {
       </div>
 
       <div className="form-group">
-        <label for="startDate">departure date</label>
+        <label htmlFor="departureDate">departure date</label>
         <input
           type="date"
           className="input-date"
           name="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
+          // onChange={formik.handleChange}
+          // onBlur={formik.handleBlur}
+          // value={formik.values.departureDate}
         />
       </div>
-      <button className="btn-outline-default">book a train</button>
+      <button type="submit" className="btn-outline-default">book a train</button>
     </form>
   );
 };
